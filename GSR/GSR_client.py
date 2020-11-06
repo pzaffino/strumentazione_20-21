@@ -54,7 +54,6 @@ def main():
 
   strPort = args.port
   maxLen = args.maxLen
-  print(maxLen)
 
   print('reading from serial port %s...' % strPort)
 
@@ -65,11 +64,11 @@ def main():
 
   # set up animation
   fig = plt.figure()
-  ax = plt.axes(xlim=(0, maxLen), ylim=(200, 300))
+  ax = plt.axes(xlim=(0, maxLen), ylim=(0, 550))
   a0, = ax.plot([], [])
   anim = animation.FuncAnimation(fig, analogPlot.update,
                                  fargs=(a0,),
-                                 interval=5)
+                                 interval=10)
 
   # show plot
   plt.show()

@@ -52,9 +52,9 @@ void loop()
     // For both, a value of 0 means "invalid"
     if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
         //Serial.print("Heart rate:");
-        Serial.println(pox.getHeartRate());
+        //Serial.println(pox.getHeartRate());
         //Serial.print("bpm / SpO2:");
-        //Serial.print(pox.getSpO2());
+        Serial.println(pox.getSpO2());
         //Serial.println("%");
 
         tsLastReport = millis();
